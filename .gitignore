@@ -5,3 +5,4 @@ newtest
 *.o
 *.a
 *.swp
+.venv
