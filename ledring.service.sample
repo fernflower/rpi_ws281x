@@ -1,0 +1,15 @@
+[Unit]
+Description=12 diode led ring
+After=docker.service
+
+[Service]
+Type=simple
+WorkingDirectory=/root/rpi_ws281x
+ExecStartPre=-/usr/bin/docker stop ws281x
+ExecStartPre=-/usr/bin/docker rm ws281x
+ExecStart=/usr/bin/docker run --rm --privileged --name ws281x ws281x
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
