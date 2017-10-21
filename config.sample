@@ -1,2 +1,16 @@
+[ledring]
+# pwm pin used for digital input
+DIN = 18
+# number of leds in your ring
+LEDS = 12
+# led signal frequency in Hz
+FREQ = 800000
+# brightness is in (0, 255)
+BRIGHTNESS = 255
+# DMA channel to use for generating signal (try 5)
+DMA = 5
+# 1 to invert the signal (when using NPN transistor level shift)
+INVERT = 0
+
 [button]
 DIO=26
