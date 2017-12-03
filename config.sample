@@ -14,3 +14,10 @@ INVERT = 0
 
 [button]
 DIO=26
+
+[servo]
+PIN = 6
+DMA = 3
+PULSE_MIN = 900
+PULSE_MAX = 2100
+

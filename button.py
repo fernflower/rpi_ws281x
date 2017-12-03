@@ -9,8 +9,7 @@ import extdevinterface
 
 
 class Button(extdevinterface.ExternalDevice):
-    def __init__(self):
-        super(Button, self).__init__(config_section="button")
+    config_section = "button"
 
     def init(self):
         self._dio = int(self.params.dio)
