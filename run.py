@@ -10,7 +10,7 @@ import servo
 def main():
     a_button = button.Button()
     a_servo = servo.Servo()
-    # a_ledring = ledring.Ledring()
+    a_ledring = ledring.Ledring()
     pressed = True
     is_on = False
     while True:
@@ -22,11 +22,11 @@ def main():
             is_on = not is_on
             print("Button is now %s" % ("on" if is_on else "off"))
             if is_on:
-                # a_ledring.apply_color("neutral-red")
+                a_ledring.apply_color("neutral-red")
                 if a_servo._started:
                     a_servo.stop()
             else:
-                # a_ledring.apply_color("yellow")
+                a_ledring.apply_color("yellow")
                 a_servo.start()
             pressed = False
 
